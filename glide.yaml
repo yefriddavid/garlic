@@ -1,0 +1,40 @@
+package: garlic
+import:
+- package: github.com/go-kit/kit
+  version: v0.9.0
+  subpackages:
+  - endpoint
+  - log
+  - metrics
+  - metrics/prometheus
+  - tracing/opentracing
+  - transport/grpc
+  - transport/http
+- package: github.com/golang/protobuf
+  version: v1.3.2
+  subpackages:
+  - proto
+- package: github.com/lightstep/lightstep-tracer-go
+  version: v0.17.0
+- package: github.com/oklog/oklog
+  version: v0.3.2
+  subpackages:
+  - pkg/group
+- package: github.com/opentracing/opentracing-go
+  version: v1.1.0
+- package: github.com/openzipkin/zipkin-go-opentracing
+  version: v0.3.4
+  #version: v0.4.3
+- package: github.com/prometheus/client_golang
+  version: v1.1.0
+  subpackages:
+  - prometheus
+  - prometheus/promhttp
+- package: golang.org/x/net
+  subpackages:
+  - context
+- package: google.golang.org/grpc
+  version: v1.24.0
+- package: sourcegraph.com/sourcegraph/appdash
+  subpackages:
+  - opentracing
