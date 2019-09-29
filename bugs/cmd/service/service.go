@@ -48,6 +48,8 @@ func Run() {
 	logger = log.NewLogfmtLogger(os.Stderr)
 	logger = log.With(logger, "ts", log.DefaultTimestampUTC)
 	logger = log.With(logger, "caller", log.DefaultCaller)
+	logger = log.With(logger, "caller2", log.DefaultCaller)
+	logger = log.With(logger, "caller3", log.DefaultCaller)
 
 	//  Determine which tracer to use. We'll pass the tracer to all the
 	// components that use it, as a dependency

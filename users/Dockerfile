@@ -13,7 +13,8 @@ WORKDIR $PKG_PATH
 
 RUN glide install
 
-COPY . $PKG_PATH
+ADD . $PKG_PATH
+#COPY . $PKG_PATH
 
 RUN go get github.com/canthefason/go-watcher
 RUN go install github.com/canthefason/go-watcher/cmd/watcher

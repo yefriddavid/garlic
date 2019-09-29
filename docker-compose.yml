@@ -1,32 +1,36 @@
 version: "2"
 services:
   bugs:
+    hostname: bugs-services
+    domainname: garlic-app.local
     build:
       context: .
       dockerfile: bugs/Dockerfile
     restart: always
     volumes:
-    - .:/go/src/garlic
+    - ./bugs:/go/src/github.com/yefriddavid/garlic/bugs
     container_name: bugs
     ports:
     - 8801:8081
+
   notificator:
     build:
       context: .
       dockerfile: notificator/Dockerfile
     restart: always
     volumes:
-    - .:/go/src/garlic
+    - ./notificator:/go/src/github.com/yefriddavid/garlic/notificator
     container_name: notificator
     ports:
     - 8802:8082
+
   users:
     build:
       context: .
       dockerfile: users/Dockerfile
     restart: always
     volumes:
-    - .:/go/src/garlic
+    - ./users:/go/src/github.com/yefriddavid/garlic/users
     container_name: users
     ports:
     - 8800:8081
