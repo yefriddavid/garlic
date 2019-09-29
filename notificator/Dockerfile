@@ -1,6 +1,5 @@
 FROM golang:1.10.3
 
-
 RUN curl https://glide.sh/get | sh
 RUN mkdir -p /go/src/garlic
 
