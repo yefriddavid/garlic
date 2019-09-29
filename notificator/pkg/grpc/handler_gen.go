@@ -2,8 +2,8 @@
 package grpc
 
 import (
-	endpoint "garlic/notificator/pkg/endpoint"
-	pb "garlic/notificator/pkg/grpc/pb"
+	endpoint "github.com/yefriddavid/garlic/notificator/pkg/endpoint"
+	pb "github.com/yefriddavid/garlic/notificator/pkg/grpc/pb"
 	grpc "github.com/go-kit/kit/transport/grpc"
 )
 

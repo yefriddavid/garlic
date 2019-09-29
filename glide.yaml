@@ -1,4 +1,5 @@
-package: garlic
+package: github.com/yefriddavid/garlic
+#package: garlic
 import:
 - package: github.com/go-kit/kit
   version: v0.9.0

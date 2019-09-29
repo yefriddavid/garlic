@@ -2,7 +2,7 @@ package endpoint
 
 import (
 	"context"
-	service "garlic/users/pkg/service"
+	service "github.com/yefriddavid/garlic/users/pkg/service"
 	endpoint "github.com/go-kit/kit/endpoint"
 )
 

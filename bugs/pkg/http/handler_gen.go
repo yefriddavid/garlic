@@ -2,7 +2,7 @@
 package http
 
 import (
-	endpoint "garlic/bugs/pkg/endpoint"
+	endpoint "github.com/yefriddavid/garlic/bugs/pkg/endpoint"
 	http "github.com/go-kit/kit/transport/http"
 	http1 "net/http"
 )

@@ -1,6 +1,6 @@
 package main
 
-import service "garlic/bugs/cmd/service"
+import service "github.com/yefriddavid/garlic/bugs/cmd/service"
 
 func main() {
 	service.Run()

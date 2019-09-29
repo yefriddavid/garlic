@@ -3,9 +3,9 @@ package service
 import (
 	"flag"
 	"fmt"
-	endpoint "garlic/users/pkg/endpoint"
-	http "garlic/users/pkg/http"
-	service "garlic/users/pkg/service"
+	endpoint "github.com/yefriddavid/garlic/users/pkg/endpoint"
+	http "github.com/yefriddavid/garlic/users/pkg/http"
+	service "github.com/yefriddavid/garlic/users/pkg/service"
 	endpoint1 "github.com/go-kit/kit/endpoint"
 	log "github.com/go-kit/kit/log"
 	prometheus "github.com/go-kit/kit/metrics/prometheus"
@@ -26,6 +26,7 @@ import (
 
 var tracer opentracinggo.Tracer
 var logger log.Logger
+
 
 // Define our flags. Your service probably won't need to bind listeners for
 // all* supported transports, but we do it here for demonstration purposes.

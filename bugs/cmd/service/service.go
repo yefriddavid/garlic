@@ -3,9 +3,9 @@ package service
 import (
 	"flag"
 	"fmt"
-	endpoint "garlic/bugs/pkg/endpoint"
-	http "garlic/bugs/pkg/http"
-	service "garlic/bugs/pkg/service"
+	endpoint "github.com/yefriddavid/garlic/bugs/pkg/endpoint"
+	http "github.com/yefriddavid/garlic/bugs/pkg/http"
+	service "github.com/yefriddavid/garlic/bugs/pkg/service"
 	endpoint1 "github.com/go-kit/kit/endpoint"
 	log "github.com/go-kit/kit/log"
 	prometheus "github.com/go-kit/kit/metrics/prometheus"

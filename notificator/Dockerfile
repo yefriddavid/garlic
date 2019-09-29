@@ -1,23 +1,38 @@
 FROM golang:1.10.3
 
+#RUN echo $GOPATH
 RUN curl https://glide.sh/get | sh
-RUN mkdir -p /go/src/garlic
 
-ADD . /go/src/garlic
+ENV MDL_NAME=notificator
+ENV PKG_NAME=garlic
+ENV PKG_PATH=$GOPATH/src/$PKG_NAME
+#RUN mkdir -p $PKG_NAME 
 
-WORKDIR /go/src/garlic
+#ADD . $GOPATH/src/garlic
+COPY glide.yaml glide.lock $PKG_PATH/
+
+WORKDIR $PKG_PATH
 
 
 RUN dir
+#RUN glide info
+RUN glide name
+RUN glide install
+#RUN glide list
+RUN pwd
+RUN dir
+#RUN dir
 #RUN glide install
-RUN glide up
+#RUN glide up
 #RUN glide install
+
+COPY . $PKG_PATH
 
 RUN go get github.com/canthefason/go-watcher
 RUN go install github.com/canthefason/go-watcher/cmd/watcher
 
-ENTRYPOINT  watcher -run garlic/notificator/cmd  -watch garlic/notificator
-
+WORKDIR $PKG_PATH
+ENTRYPOINT  watcher -run $MDL_NAME/cmd  -watch $MDL_NAME
 
 
 #RUN curl https://glide.sh/get | sh

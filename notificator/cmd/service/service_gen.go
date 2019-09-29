@@ -2,8 +2,8 @@
 package service
 
 import (
-	endpoint "garlic/notificator/pkg/endpoint"
-	service "garlic/notificator/pkg/service"
+	endpoint "github.com/yefriddavid/garlic/notificator/pkg/endpoint"
+	service "github.com/yefriddavid/garlic/notificator/pkg/service"
 	endpoint1 "github.com/go-kit/kit/endpoint"
 	log "github.com/go-kit/kit/log"
 	prometheus "github.com/go-kit/kit/metrics/prometheus"

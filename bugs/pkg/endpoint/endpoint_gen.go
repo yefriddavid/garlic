@@ -2,7 +2,7 @@
 package endpoint
 
 import (
-	service "garlic/bugs/pkg/service"
+	service "github.com/yefriddavid/garlic/bugs/pkg/service"
 	endpoint "github.com/go-kit/kit/endpoint"
 )
 

@@ -3,8 +3,8 @@ package grpc
 import (
 	"context"
 	"errors"
-	endpoint "garlic/notificator/pkg/endpoint"
-	pb "garlic/notificator/pkg/grpc/pb"
+	endpoint "github.com/yefriddavid/garlic/notificator/pkg/endpoint"
+	pb "github.com/yefriddavid/garlic/notificator/pkg/grpc/pb"
 
 	grpc "github.com/go-kit/kit/transport/grpc"
 	context1 "golang.org/x/net/context"

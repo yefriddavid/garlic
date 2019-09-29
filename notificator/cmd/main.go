@@ -1,6 +1,6 @@
 package main
 
-import service "garlic/notificator/cmd/service"
+import service "github.com/yefriddavid/garlic/notificator/cmd/service"
 
 func main() {
 	service.Run()
