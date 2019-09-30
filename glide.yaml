@@ -1,5 +1,4 @@
 package: github.com/yefriddavid/garlic
-#package: garlic
 import:
 - package: github.com/go-kit/kit
   version: v0.9.0
@@ -25,11 +24,8 @@ import:
   version: v1.1.0
 - package: github.com/openzipkin/zipkin-go-opentracing
   version: v0.3.3
-  #version: v0.4.3
-  #version: v0.3.4
 - package: github.com/prometheus/client_golang
   version: v0.9.1
-  #version: v1.1.0
   subpackages:
   - prometheus
   - prometheus/promhttp
@@ -41,3 +37,5 @@ import:
 - package: sourcegraph.com/sourcegraph/appdash
   subpackages:
   - opentracing
+- package: github.com/satori/go.uuid
+  version: v1.2.0

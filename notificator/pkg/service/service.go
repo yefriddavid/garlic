@@ -1,18 +1,28 @@
 package service
 
-import "context"
+import (
+	"context"
+	uuid "github.com/satori/go.uuid"
+
+)
+//import "fmt"
+
 
 // NotificatorService describes the service.
 type NotificatorService interface {
 	// Add your methods here
-	SendEmail(ctx context.Context, email string, content string) error
+	SendEmail(ctx context.Context, email string, content string) (string, error)
 }
 
 type basicNotificatorService struct{}
 
-func (b *basicNotificatorService) SendEmail(ctx context.Context, email string, content string) (e0 error) {
-	// TODO implement the business logic of SendEmail
-	return e0
+func (b *basicNotificatorService) SendEmail(ctx context.Context, email string, content string) (string, error) {
+	id, err := uuid.NewV4()
+	if err != nil {
+		return "", err
+	}
+
+	return id.String(), nil
 }
 
 // NewBasicNotificatorService returns a naive, stateless implementation of NotificatorService.

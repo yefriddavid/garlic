@@ -1,0 +1,103 @@
+hash: dab625f4f1bf3fe866e353c4155ff6f467e4383184c918cfb566432a001eb1cc
+updated: 2019-09-30T01:26:06.758030072-03:00
+imports:
+- name: github.com/go-kit/kit
+  version: 150a65a7ec6156b4b640c1fd55f26fd3d475d656
+  subpackages:
+  - endpoint
+  - log
+  - metrics
+  - metrics/prometheus
+  - tracing/opentracing
+  - transport/grpc
+  - transport/http
+- name: github.com/golang/protobuf
+  version: 6c65a5562fc06764971b7c5d05c76c75e84bdbf7
+  subpackages:
+  - proto
+  - ptypes
+  - ptypes/any
+  - ptypes/duration
+  - ptypes/timestamp
+- name: github.com/lightstep/lightstep-tracer-go
+  version: d54b38984d35ad453ebe350d8fa4e538ebffb308
+- name: github.com/oklog/oklog
+  version: e3ad1c411c27b4bc18c5facb9331820d141a5a54
+  subpackages:
+  - pkg/group
+- name: github.com/opentracing/opentracing-go
+  version: 659c90643e714681897ec2521c60567dd21da733
+- name: github.com/openzipkin/zipkin-go-opentracing
+  version: 4c9fbcbd6d73a644fd17214fe475296780c68fb5
+- name: github.com/prometheus/client_golang
+  version: abad2d1bd44235a26707c172eab6bca5bf2dbad3
+  subpackages:
+  - prometheus
+  - prometheus/promhttp
+- name: github.com/satori/go.uuid
+  version: f58768cc1a7a7e77a3bd49e98cdd21419399b6a3
+- name: golang.org/x/net
+  version: a04bdaca5b32abe1c069418fb7088ae607de5bd0
+  subpackages:
+  - context
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - lex/httplex
+  - trace
+- name: golang.org/x/sys
+  version: c990c680b611ac1aeb7d8f2af94a825f98d69720
+  subpackages:
+  - unix
+- name: golang.org/x/text
+  version: c01e4764d870b77f8abe5096ee19ad20d80e8075
+  subpackages:
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
+- name: google.golang.org/genproto
+  version: f676e0f3ac6395ff1a529ae59a6670878a8371a6
+  subpackages:
+  - googleapis/rpc/status
+- name: google.golang.org/grpc
+  version: f6d0f9ee430895e87ef1ceb5ac8f39725bafceef
+  subpackages:
+  - balancer
+  - balancer/base
+  - balancer/roundrobin
+  - binarylog/grpc_binarylog_v1
+  - codes
+  - connectivity
+  - credentials
+  - credentials/internal
+  - encoding
+  - encoding/proto
+  - grpclog
+  - internal
+  - internal/backoff
+  - internal/balancerload
+  - internal/binarylog
+  - internal/channelz
+  - internal/envconfig
+  - internal/grpcrand
+  - internal/grpcsync
+  - internal/syscall
+  - internal/transport
+  - keepalive
+  - metadata
+  - naming
+  - peer
+  - resolver
+  - resolver/dns
+  - resolver/passthrough
+  - serviceconfig
+  - stats
+  - status
+  - tap
+- name: sourcegraph.com/sourcegraph/appdash
+  version: f9a4336c02542ebbfa01c37949bd7152fb0f659c
+  subpackages:
+  - opentracing
+testImports: []

@@ -15,6 +15,7 @@ type SendEmailRequest struct {
 
 // SendEmailResponse collects the response parameters for the SendEmail method.
 type SendEmailResponse struct {
+	Id string `json:"id"`
 	E0 error `json:"e0"`
 }
 
@@ -22,8 +23,8 @@ type SendEmailResponse struct {
 func MakeSendEmailEndpoint(s service.NotificatorService) endpoint.Endpoint {
 	return func(ctx context.Context, request interface{}) (interface{}, error) {
 		req := request.(SendEmailRequest)
-		e0 := s.SendEmail(ctx, req.Email, req.Content)
-		return SendEmailResponse{E0: e0}, nil
+		id, e0 := s.SendEmail(ctx, req.Email, req.Content)
+		return SendEmailResponse{ Id: id, E0: e0}, nil
 	}
 }
 

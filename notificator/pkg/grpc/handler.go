@@ -2,13 +2,14 @@ package grpc
 
 import (
 	"context"
-	"errors"
+	// "errors"
 	endpoint "github.com/yefriddavid/garlic/notificator/pkg/endpoint"
 	pb "github.com/yefriddavid/garlic/notificator/pkg/grpc/pb"
 
 	grpc "github.com/go-kit/kit/transport/grpc"
 	context1 "golang.org/x/net/context"
 )
+
 
 // makeSendEmailHandler creates the handler logic
 func makeSendEmailHandler(endpoints endpoint.Endpoints, options []grpc.ServerOption) grpc.Handler {
@@ -19,14 +20,20 @@ func makeSendEmailHandler(endpoints endpoint.Endpoints, options []grpc.ServerOpt
 // gRPC request to a user-domain SendEmail request.
 // TODO implement the decoder
 func decodeSendEmailRequest(_ context.Context, r interface{}) (interface{}, error) {
-	return nil, errors.New("'Notificator' Decoder is not impelemented")
+	//return nil, errors.New("'Notificator' Decoder is not impelemented")
+	req := r.(*pb.SendEmailRequest)
+	return endpoint.SendEmailRequest{Email: req.Email, Content: req.Content}, nil
 }
 
 // encodeSendEmailResponse is a transport/grpc.EncodeResponseFunc that converts
 // a user-domain response to a gRPC reply.
 // TODO implement the encoder
 func encodeSendEmailResponse(_ context.Context, r interface{}) (interface{}, error) {
-	return nil, errors.New("'Notificator' Encoder is not impelemented")
+	reply := r.(endpoint.SendEmailResponse)
+	return &pb.SendEmailReply{ Id: reply.Id}, nil
+
+
+	// return nil, errors.New("'Notificator' Encoder is not impelemented")
 }
 func (g *grpcServer) SendEmail(ctx context1.Context, req *pb.SendEmailRequest) (*pb.SendEmailReply, error) {
 	_, rep, err := g.sendEmail.ServeGRPC(ctx, req)
@@ -35,3 +42,4 @@ func (g *grpcServer) SendEmail(ctx context1.Context, req *pb.SendEmailRequest) (
 	}
 	return rep.(*pb.SendEmailReply), nil
 }
+
