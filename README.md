@@ -1,4 +1,5 @@
 curl -XPOST http://localhost:8800/create -d '{"email": "test"}'
+curl -XPOST http://192.168.99.100:30090/create -d '{"email": "test"}'
 
 docker-compose up
 
