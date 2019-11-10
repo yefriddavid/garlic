@@ -53,6 +53,8 @@ kubectl logs -f hello-garlic-5998fd7b8f-dk8nm
 
 
 kubectl create -f deployment/api-service.yaml
+kubectl create -f deployment/users-service.yaml
 
 kubectl get pods -w
 minikube service api-service --url
+minikube service user-deployment --url

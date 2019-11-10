@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
         - name: user
-          image: yefriddavid/user-garlic:v1
+          image: yefriddavid/garlic-users:v1
           ports:
             - name: user-service
-              containerPort: 3000
+              containerPort: 8081
 
 ---
 apiVersion: v1
@@ -30,5 +30,7 @@ spec:
   selector:
     app: user
   ports:
-    - port: 3000
-      targetPort: user-service
+    - name: http
+      port: 8081
+      nodePort: 30090
+  type: NodePort

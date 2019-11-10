@@ -1,36 +1,41 @@
 version: "2"
 services:
   bugs:
-    hostname: bugs-services
-    domainname: garlic-app.local
+    container_name: bugs
+    hostname: garlic-bugs
+    domainname: garlic-bugs.local
     build:
       context: .
       dockerfile: bugs/Dockerfile
     restart: always
     volumes:
     - ./bugs:/go/src/github.com/yefriddavid/garlic/bugs
-    container_name: bugs
     ports:
     - 8801:8081
 
   notificator:
+    container_name: notificator
+    hostname: garlic-notificator
+    domainname: garlic-notificator.local
     build:
       context: .
-      dockerfile: notificator/Dockerfile
+      dockerfile: ./notificator/Dockerfile
     restart: always
     volumes:
     - ./notificator:/go/src/github.com/yefriddavid/garlic/notificator
-    container_name: notificator
     ports:
     - 8802:8082
 
+  # api curl -XPOST http://localhost:8800/create -d '{"email": "test"}'    
   users:
+    container_name: users
+    hostname: garlic-users
+    domainname: garlic-users.local
     build:
       context: .
-      dockerfile: users/Dockerfile
+      dockerfile: ./users/Dockerfile
     restart: always
     volumes:
     - ./users:/go/src/github.com/yefriddavid/garlic/users
-    container_name: users
     ports:
     - 8800:8081
