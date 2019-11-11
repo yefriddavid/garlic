@@ -1,5 +1,5 @@
-hash: 49c2771c4983a42c683d4cfe9e2fb67e9925c9cdb255cff457e9f7876aac89be
-updated: 2019-11-10T21:02:58.122613809-03:00
+hash: a92750a18489b8d502da3a86ac0e4a4877cdcf70edbab0ae25816972efc397ab
+updated: 2019-09-29T17:58:47.665264645-03:00
 imports:
 - name: github.com/apache/thrift
   version: 327ebb6c2b6df8bf075da02ef45a2a034e9b79ba
@@ -35,8 +35,6 @@ imports:
   - transport/http
 - name: github.com/go-logfmt/logfmt
   version: 390ab7935ee28ec6b286364bba9b4dd6410cb3d5
-- name: github.com/gofrs/uuid
-  version: 6b08a5c5172ba18946672b49749cde22873dd7c2
 - name: github.com/gogo/protobuf
   version: 0c5dcd73e6fd1ac6c452a68ec7f8d463d111be66
   subpackages:

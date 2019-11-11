@@ -1,5 +1,14 @@
-curl -XPOST http://localhost:8800/create -d '{"email": "test"}'
-curl -XPOST http://192.168.99.100:30090/create -d '{"email": "test"}'
+// Users
+- curl -XPOST http://localhost:8800/create -d '{"email": "test@gmail.com"}'
+- curl -XPOST http://192.168.99.100:30090/create -d '{"email": "test"}'
+
+
+// Bugs
+- curl -XPOST http://localhost:8801/create -d '{"bug": "buuuuu"}'
+
+// Notificator
+- node app.js
+
 
 docker-compose up
 
@@ -55,7 +64,19 @@ kubectl logs -f hello-garlic-5998fd7b8f-dk8nm
 
 kubectl create -f deployment/api-service.yaml
 kubectl create -f deployment/users-service.yaml
+kubectl create -f deployment/bug-service.yaml
+kubectl create -f deployment/notificator-service.yaml
 
 kubectl get pods -w
 minikube service api-service --url
-minikube service user-deployment --url
+
+minikube service user-service --url
+minikube service noti-service --url
+minikube service bug-service --url
+
+
+
+docker commit users yefriddavid/garlic-users:v1
+docker commit bugs yefriddavid/garlic-bugs:v1
+docker commit notificator yefriddavid/garlic-notificator:v1
+

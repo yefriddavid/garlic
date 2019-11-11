@@ -1,6 +1,7 @@
 package service
 
 import "context"
+import "fmt"
 
 // BugsService describes the service.
 type BugsService interface {
@@ -12,6 +13,9 @@ type basicBugsService struct{}
 
 func (b *basicBugsService) Create(ctx context.Context, bug string) (e0 error) {
 	// TODO implement the business logic of Create
+	fmt.Println("Here is bug!");
+	fmt.Println("Param bug!");
+	fmt.Println(bug);
 	return e0
 }
 

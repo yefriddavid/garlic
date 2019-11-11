@@ -37,5 +37,5 @@ import:
 - package: sourcegraph.com/sourcegraph/appdash
   subpackages:
   - opentracing
-- package: github.com/satori/go.uuid
-  version: v1.2.0
+- package: github.com/gofrs/uuid
+  version: 3.2.0

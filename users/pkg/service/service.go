@@ -13,7 +13,9 @@ type basicUsersService struct{}
 
 func (b *basicUsersService) Create(ctx context.Context, email string) (e0 error) {
 	// TODO implement the business logic of Create
-	fmt.Println("Here is better!");
+	fmt.Println("Here is users!");
+	fmt.Println("Param email!");
+	fmt.Println(email);
 	return e0
 }
 

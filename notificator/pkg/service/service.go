@@ -2,7 +2,8 @@ package service
 
 import (
 	"context"
-	uuid "github.com/satori/go.uuid"
+	// uuid "github.com/satori/go.uuid"
+	uuid "github.com/gofrs/uuid"
 
 )
 //import "fmt"
