@@ -6,7 +6,9 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH);
 const NotificatorService = grpc.loadPackageDefinition(packageDefinition).pb.Notificator;
 
 // const endpoint = "127.0.0.1:8802"
-const endpoint = "localhost:8802"
+// const endpoint = "localhost:8802"
+// const endpoint = "192.168.99.100:8082"
+const endpoint = "192.168.99.100:30091"
 // const endpoint = "172.26.0.2:8802"
 
 const caller = new NotificatorService(endpoint, grpc.credentials.createInsecure());

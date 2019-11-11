@@ -80,3 +80,9 @@ docker commit users yefriddavid/garlic-users:v1
 docker commit bugs yefriddavid/garlic-bugs:v1
 docker commit notificator yefriddavid/garlic-notificator:v1
 
+
+docker push yefriddavid/garlic-users:v1
+docker push yefriddavid/garlic-bugs:v1
+docker push yefriddavid/garlic-notificator:v1
+
+minikube ip

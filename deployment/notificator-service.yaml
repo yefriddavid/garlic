@@ -17,6 +17,7 @@ spec:
       containers:
         - name: notificator
           image: yefriddavid/garlic-notificator:v1
+          #imagePullPolicy: "Always"
           ports:
             - name: noti-service
               containerPort: 8082
@@ -31,4 +32,6 @@ spec:
     app: notificator
   ports:
     - port: 8082
+      nodePort: 30091
       targetPort: noti-service
+  type: NodePort
