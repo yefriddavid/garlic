@@ -63,7 +63,7 @@ kubectl logs -f hello-garlic-5998fd7b8f-dk8nm
 
 
 kubectl create -f deployment/api-service.yaml
-kubectl create -f deployment/users-service.yaml
+kubectl create -f deployment/user-service.yaml
 kubectl create -f deployment/bug-service.yaml
 kubectl create -f deployment/notificator-service.yaml
 
@@ -73,6 +73,10 @@ minikube service api-service --url
 minikube service user-service --url
 minikube service noti-service --url
 minikube service bug-service --url
+
+kubectl get nodes
+kubectl get namespaces
+
 
 
 
@@ -86,3 +90,4 @@ docker push yefriddavid/garlic-bugs:v1
 docker push yefriddavid/garlic-notificator:v1
 
 minikube ip
+minikube ssh

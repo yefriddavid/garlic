@@ -17,6 +17,7 @@ spec:
       containers:
         - name: bug
           image: yefriddavid/garlic-bugs:v1
+          imagePullPolicy: "Always"
           ports:
             - name: bug-service
               containerPort: 8081

@@ -17,6 +17,7 @@ spec:
       containers:
         - name: user
           image: yefriddavid/garlic-users:v1
+          imagePullPolicy: "Always"
           ports:
             - name: user-service
               containerPort: 8081
