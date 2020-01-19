@@ -14,8 +14,8 @@ docker-compose up
 
 
 
-first commit era necesario glid install en el hierro
-second commit se cambio la ruta de los paquetes (garlic/bugs by github.com/yefriddavid/garlic/bugs)
+- first commit era necesario glid install en el hierro
+- second commit se cambio la ruta de los paquetes (garlic/bugs by github.com/yefriddavid/garlic/bugs)
 
 
 
@@ -26,6 +26,29 @@ https://dev.to/plutov/microservices-with-go-kit-part-1-13dd
 https://www.youtube.com/watch?v=SU9t6fUQltE
 
 https://github.com/plutov/packagemain/tree/master/13-go-kit-2
+
+
+
+```sh
+
+
+// lets create service with next commands:
+
+kit new service users
+kit new service bugs
+kit new service notificator
+
+kit generate service users --dmw
+kit generate service bugs --dmw
+
+
+kit generate docker
+
+docker-compose up
+
+
+
+
 
 
 minikube status
@@ -91,3 +114,21 @@ docker push yefriddavid/garlic-notificator:v1
 
 minikube ip
 minikube ssh
+
+```
+
+
+
+applicatio features
+
+modules (notification logs, users and emails)
+
+- notification logs is local
+- user crud save notifications logs actions (save, update, delete, list, getOne), for new users send notification email
+- send email save log of action in notification log
+
+
+1. users mongodb (crued) (http and grpc)
+2. notification logs (http and grpc)
+
+
