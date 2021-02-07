@@ -12,7 +12,8 @@ const NotificatorService = grpc.loadPackageDefinition(packageDefinition).pb.Noti
 // const endpoint = "localhost:8802"
 // const endpoint = "192.168.99.100:8082"
 // const endpoint = `${process.env.TARGET_IP}:30091`
-const endpoint = `${process.env.TARGET_IP}:8802`
+// const endpoint = `${process.env.TARGET_IP}:8802`
+const endpoint = `${process.env.TARGET_HOST}`
 // const endpoint = "172.26.0.2:8802"
 
 const caller = new NotificatorService(endpoint, grpc.credentials.createInsecure());
