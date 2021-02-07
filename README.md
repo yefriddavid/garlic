@@ -132,3 +132,15 @@ modules (notification logs, users and emails)
 2. notification logs (http and grpc)
 
 
+
+
+### References
+https://dzone.com/articles/how-to-run-a-basic-nodejs-application-in-kubernete
+
+
+
+
+
+kubectl config view
+
+
